@@ -16,7 +16,7 @@ with open(output_file, 'w') as out:
 
 with open(output_file_b, 'w') as out:
     # Loop pelos arquivos no diretório
-    for filepath in glob.iglob("ADFA-LD\ADFA-LD\Attack_Data_Master\*\*.txt", recursive=True):
+    for filepath in glob.iglob("ADFA-LD\ADFA-LD\Training_Data_Master\*.txt", recursive=True):
         # Abre o arquivo atual para leitura
         with open(filepath, 'r') as f:
             # Copia o conteúdo do arquivo para o arquivo de saída
