@@ -12,7 +12,7 @@ import glob
 
 # Nome do arquivo de entrada
 input_file = "ADFA-LD\ADFA-LD\Training_Data_Attack\*.txt"
-input_file_b = "ADFA-LD\ADFA-LD\Training_Data_Master\*.txt"
+input_file_b = "ADFA-LD\ADFA-LD\Training_Data_Clean\*.txt"
 
 # Nome do arquivo de saída
 output_file = 'arquivo_saida.txt'
@@ -33,12 +33,12 @@ output_file_b = 'arquivo_saida_b.txt'
 # Abre o arquivo de saída para escrita.
 
 with open(output_file_b, 'w') as out:
-    # Loop pelos arquivos no diretório
-    for filepath in glob.iglob(input_file_b, recursive=True):
-        # Abre o arquivo atual para leitura
-        with open(filepath, 'r') as f:
-            # Copia o conteúdo do arquivo para o arquivo de saída
-            out.write(f.read())
+     # Loop pelos arquivos no diretório
+     for filepath in glob.iglob(input_file_b, recursive=True):
+         # Abre o arquivo atual para leitura
+         with open(filepath, 'r') as f:
+                # Copia o conteúdo do arquivo para o arquivo de saída
+                out.write(f.read())
 
 # 'output_file_b' contém toda a lista sequencia de Syscalls de todos os arquivos.
 
@@ -65,7 +65,7 @@ with open('arquivo_saida_b.txt', 'r') as file:
 # Documentação disponível em: 'https://www.nltk.org/api/nltk.lm.html'
 
 # Definir o tamanho do n-gram
-n = 3
+n = 2
 
 # Criar uma lista para armazenar os n-grams
 ngrams = []
